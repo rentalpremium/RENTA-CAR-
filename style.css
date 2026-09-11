@@ -1,0 +1,1384 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #151515;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 80px;
+    background: #111;
+    border-bottom: 3px solid #f5c400;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.encabezado {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.logo-link {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f5c400;
+}
+
+.boton {
+    display: inline-block;
+    background: #f5c400;
+    color: #111;
+    padding: 13px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #ffd83d;
+    transform: translateY(-2px);
+}
+
+.boton-header {
+    padding: 10px 18px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url("Portadanueva.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* CONTENIDO */
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: 92%;
+    max-width: 1180px;
+    margin: auto;
+
+    color: white;
+
+    /* TEXTO UN POCO MÁS A LA IZQUIERDA */
+    transform: translateX(-35px);
+}
+
+
+/* =========================
+   TEXTO DEL HERO
+========================= */
+
+.hero-cuadro {
+    width: fit-content;
+    max-width: 680px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+
+/* ETIQUETA */
+
+.etiqueta {
+    color: #f5c400;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+
+    text-shadow: none;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: 68px;
+    line-height: 0.98;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    text-shadow: none;
+}
+
+
+/* PALABRA AMARILLA */
+
+.hero h1 span {
+    color: #f5c400;
+}
+
+
+/* DESCRIPCIÓN */
+
+.hero-descripcion {
+    max-width: 420px;
+
+    font-size: 18px;
+    color: white;
+
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+
+    text-shadow: none;
+}
+
+
+/* BOTONES */
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* BOTÓN SECUNDARIO */
+
+.boton-secundario {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.boton-secundario:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 90px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion p {
+    color: #c59d00;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.titulo-seccion span {
+    color: #777;
+}
+
+
+/* =========================
+   RESERVA
+========================= */
+
+.reserva {
+    background: white;
+}
+
+.reserva-contenedor {
+    max-width: 850px;
+    margin: auto;
+    background: #f7f7f7;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo input,
+.campo select {
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #f5c400;
+    box-shadow: 0 0 0 2px rgba(245, 196, 0, 0.15);
+}
+
+form > .boton {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+
+/* =========================
+   POR QUÉ ELEGIRNOS
+========================= */
+
+.porque {
+    background: #111;
+    color: white;
+}
+
+.porque .titulo-seccion h2 {
+    color: white;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: #1b1b1b;
+    padding: 35px;
+    border: 1px solid #292929;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    border-color: #f5c400;
+    transform: translateY(-5px);
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5c400;
+    color: #111;
+    border-radius: 50%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   VEHÍCULOS
+========================= */
+
+.vehiculos {
+    background: #f5f5f5;
+}
+
+.vehiculos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.vehiculo {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.vehiculo:hover {
+    transform: translateY(-5px);
+}
+
+.vehiculo-imagen {
+    height: 320px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+}
+
+.vehiculo-imagen > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vehiculo-info {
+    padding: 25px;
+}
+
+.categoria {
+    color: #c59d00;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.vehiculo-info h3 {
+    font-size: 23px;
+    margin: 7px 0;
+}
+
+.vehiculo-info p {
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.vehiculo-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.precio {
+    color: #111;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.vehiculo-pie a {
+    color: #b08d00;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.vehiculo-pie a:hover {
+    color: #f5c400;
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carrusel {
+    position: relative;
+}
+
+.carrusel .imagen-carrusel {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.carrusel .imagen-carrusel.oculta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.flecha:hover {
+    background: #f5c400;
+    color: #111;
+}
+
+.flecha.izquierda {
+    left: 12px;
+}
+
+.flecha.derecha {
+    right: 12px;
+}
+
+.oculta {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+.sin-imagen {
+    display: none;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+    background: white;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.servicio {
+    padding: 30px;
+    border-left: 3px solid #f5c400;
+    background: #f7f7f7;
+}
+
+.servicio h3 {
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PROCESO
+========================= */
+
+/* =========================
+   PROCESO
+========================= */
+
+.proceso {
+    background: #111;
+    color: white;
+}
+
+.proceso .titulo-seccion h2 {
+    color: white;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.paso span {
+    color: #f5c400;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.paso h3 {
+    margin: 10px 0;
+}
+
+.paso p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   OPINIONES
+========================= */
+
+.opiniones {
+    background: white;
+}
+
+.opiniones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.opinion {
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.estrellas {
+    color: #f5c400;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.opinion p {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.preguntas {
+    background: #f5f5f5;
+}
+
+.faq {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    margin-bottom: 12px;
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    background: #f5c400;
+    padding: 60px 0;
+}
+
+.contacto-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contacto .etiqueta {
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.contacto h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contacto-contenido p {
+    line-height: 1.5;
+}
+
+.contacto .boton {
+    background: #111;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0b0b0b;
+    color: white;
+}
+
+.footer-contenido {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.logo-footer {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.footer-logo p,
+.footer-contacto p {
+    color: #888;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h3,
+.footer-contacto h3 {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #999;
+}
+
+.footer-links a:hover {
+    color: #f5c400;
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #25d366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    z-index: 2000;
+
+    transition: 0.3s;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.08);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .contenedor {
+        width: 90%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .vehiculos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .opiniones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    /* SOLO HERO */
+    .hero-contenido {
+        transform: translateX(-25px);
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+        height: 72px;
+        min-height: 72px;
+    }
+
+    .encabezado {
+        min-height: 72px;
+        height: 72px;
+        padding: 0;
+        justify-content: flex-end;
+    }
+
+    .logo-link {
+        left: 0;
+        top: 50%;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 48px;
+        height: 48px;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1002;
+    }
+
+
+    /* =========================
+       MENÚ MÓVIL
+    ========================= */
+
+    nav {
+        position: fixed;
+
+        top: 72px;
+        right: 0;
+
+        width: 280px;
+        max-width: 85vw;
+
+        height: calc(100vh - 72px);
+
+        background: #111;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 25px;
+
+        transform: translateX(110%);
+
+        transition: transform 0.3s ease;
+
+        box-shadow: -5px 10px 25px rgba(0, 0, 0, 0.3);
+
+        overflow-y: auto;
+
+        z-index: 1001;
+    }
+
+    nav.activo,
+    nav.menu-abierto,
+    nav.mostrar {
+        transform: translateX(0);
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 17px 5px;
+        border-bottom: 1px solid #292929;
+        width: 100%;
+    }
+
+    nav .boton-header {
+        margin-top: 18px;
+        border: none;
+        text-align: center;
+        padding: 14px;
+    }
+
+
+    /* =========================
+       HERO MÓVIL
+    ========================= */
+
+    .hero {
+        min-height: 600px;
+
+        background-image: url("portada2.png");
+        background-size: cover;
+        background-position: 60% center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-contenido {
+        width: 90%;
+
+        /* MÁS A LA IZQUIERDA */
+        transform: translateX(-15px);
+    }
+
+
+    /* ELIMINAMOS COMPLETAMENTE EL CUADRO */
+
+    .hero-cuadro {
+        width: 100%;
+        max-width: 600px;
+
+        padding: 0;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+
+    /* TEXTO */
+
+    .etiqueta {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        line-height: 1;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .hero-descripcion {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+
+        /* MÁS ANGOSTA PARA CREAR MÁS LÍNEAS */
+        max-width: 300px;
+
+        color: white;
+    }
+
+    .hero-botones {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-botones .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    .seccion {
+        padding: 65px 0;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 35px;
+    }
+
+    .titulo-seccion p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .titulo-seccion span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       RESERVA
+    ========================= */
+
+    .reserva-contenedor {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    form > .boton {
+        grid-column: auto;
+    }
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tarjeta {
+        padding: 25px;
+    }
+
+
+    /* =========================
+       VEHÍCULOS
+    ========================= */
+
+    .vehiculos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .vehiculo {
+        width: 100%;
+    }
+
+    .vehiculo-imagen {
+        height: 300px;
+    }
+
+    .vehiculo-info {
+        padding: 22px;
+    }
+
+    .vehiculo-info h3 {
+        font-size: 22px;
+    }
+
+    .vehiculo-info p {
+        font-size: 15px;
+    }
+
+    .vehiculo-pie {
+        padding-top: 15px;
+    }
+
+    .precio {
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .servicio {
+        padding: 25px;
+    }
+
+
+    /* =========================
+       PROCESO
+    ========================= */
+
+    .pasos {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .paso span {
+        font-size: 30px;
+    }
+
+
+    /* =========================
+       OPINIONES
+    ========================= */
+
+    .opiniones-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .opinion {
+        padding: 25px;
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+        width: 100%;
+    }
+
+    details {
+        padding: 18px;
+    }
+
+    summary {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    details p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contacto {
+        padding: 50px 0;
+    }
+
+    .contacto-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto h2 {
+        font-size: 30px;
+    }
+
+    .contacto-contenido .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 0;
+    }
+
+    .logo-footer {
+        width: 70px;
+        height: 70px;
+    }
+
+    .copyright {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp-flotante {
+        width: 55px;
+        height: 55px;
+
+        right: 16px;
+        bottom: 16px;
+
+        font-size: 27px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 500px) {
+
+    .contenedor {
+        width: 90%;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 27px;
+    }
+
+    nav {
+        top: 70px;
+        height: calc(100vh - 70px);
+    }
+
+    .hero {
+        min-height: 570px;
+
+        background-image: url("portada2.png");
+        background-size: cover;
+        background-position: 60% center;
+    }
+
+    .hero-contenido {
+        transform: translateX(-10px);
+    }
+
+    .hero-cuadro {
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+        line-height: 1;
+    }
+
+    .hero-descripcion {
+        font-size: 15px;
+        max-width: 280px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 27px;
+    }
+
+    .vehiculo-imagen {
+        height: 270px;
+    }
+
+    .vehiculo-info {
+        padding: 20px;
+    }
+
+    .vehiculo-info h3 {
+        font-size: 21px;
+    }
+
+    .vehiculo-pie {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .precio {
+        font-size: 16px;
+    }
+
+    .reserva-contenedor {
+        padding: 20px 15px;
+    }
+
+    .contacto h2 {
+        font-size: 27px;
+    }
+
+}

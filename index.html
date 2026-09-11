@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RENTAL PREMIUM | Alquiler de vehículos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="encabezado contenedor">
+
+        <a href="#inicio" class="logo-link">
+            <img src="Rental.png" alt="RENTAL PREMIUM" class="logo">
+        </a>
+
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Abrir menú"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="menu">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#vehiculos">Vehículos</a>
+
+            <a href="#servicios">Servicios</a>
+
+            <a href="#preguntas">Preguntas frecuentes</a>
+
+            <a href="#contacto">Contacto</a>
+
+            <a href="#reserva" class="boton boton-header">
+                Reservar ahora
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-imagen"></div>
+
+    <div class="hero-contenido">
+
+        <div class="hero-cuadro">
+
+            <div class="etiqueta">RENTAL PREMIUM</div>
+
+            <h1>
+                El vehículo<br>
+                <span>perfecto</span><br>
+                para cada 
+                <br><span>ocasión.</span>
+            </h1>
+
+            <p class="hero-descripcion">
+                Alquila vehículos de calidad,<br>
+                con atención personalizada<br>
+                y un servicio pensado para que<br>
+                disfrutes de una experiencia<br>
+                sencilla y segura.
+            </p>
+
+            <div class="hero-botones">
+                <a href="#vehiculos" class="boton">
+                    Ver vehículos
+                </a>
+
+                <a href="#reserva" class="boton boton-secundario">
+                    Solicitar reserva
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESERVA
+========================= -->
+
+<section class="seccion reserva" id="reserva">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>RESERVA</p>
+
+            <h2>
+                Cotiza tu vehículo
+            </h2>
+
+            <span>
+                Completa tus datos y nos pondremos en contacto contigo.
+            </span>
+
+        </div>
+
+
+        <div class="reserva-contenedor">
+
+            <form onsubmit="event.preventDefault(); enviarWhatsApp();">
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ingresa tu nombre"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        placeholder="Ej. 72677730"
+                        autocomplete="tel"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="vehiculo">
+                        Vehículo
+                    </label>
+
+                    <select id="vehiculo" required>
+
+                        <option value="">
+                            Selecciona un vehículo
+                        </option>
+
+                        <option value="Suzuki Swift - USD 45/día">
+                            Suzuki Swift - USD 45/día
+                        </option>
+
+                        <option value="Toyota 4Runner - USD 91/día">
+                            Toyota 4Runner - USD 91/día
+                        </option>
+
+                        <option value="GAC Emzoom negra - USD 77/día">
+                            GAC Emzoom negra - USD 77/día
+                        </option>
+
+                        <option value="Polaris RZR XP4 - Bs 4.000/6 horas">
+                            Polaris RZR XP4 - Bs 4.000/6 horas
+                        </option>
+
+                        <option value="Mitsubishi Montero Sport - USD 91/día">
+                            Mitsubishi Montero Sport - USD 91/día
+                        </option>
+
+                        <option value="Suzuki Jimny - USD 77/día">
+                            Suzuki Jimny - USD 77/día
+                        </option>
+
+                        <option value="BMW X6 - USD 135/día">
+                            BMW X6 - USD 135/día
+                        </option>
+
+                        <option value="GAC Emzoom blanca - USD 77/día">
+                            GAC Emzoom blanca - USD 77/día
+                        </option>
+
+                        <option value="Nissan Qashqai - USD 77/día">
+                            Nissan Qashqai - USD 77/día
+                        </option>
+
+                        <option value="ZNA Rich 6 Pro - USD 91/día">
+                            ZNA Rich 6 Pro - USD 91/día
+                        </option>
+
+                        <option value="Kia Sonet - USD 77/día">
+                            Kia Sonet - USD 77/día
+                        </option>
+
+                        <option value="Kia Rio - USD 40/día">
+                            Kia Rio - USD 40/día
+                        </option>
+
+                        <option value="Chery Tiggo 2 - USD 77/día">
+                            Chery Tiggo 2 - USD 77/día
+                        </option>
+
+                        <option value="Honda WR-V - USD 77/día">
+                            Honda WR-V - USD 77/día
+                        </option>
+
+                        <option value="Mazda CX-5 - USD 99/día">
+                            Mazda CX-5 - USD 99/día
+                        </option>
+
+                        <option value="Compacto City Car - USD 45/día">
+                            Compacto City Car - USD 45/día
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fechaInicio">
+                        Fecha de inicio
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaInicio"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fechaDevolucion">
+                        Fecha de devolución
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaDevolucion"
+                        required>
+
+                </div>
+
+
+                <button type="submit" class="boton">
+                    Solicitar reserva por WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POR QUÉ ELEGIRNOS
+========================= -->
+
+<section class="seccion porque">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>RENTAL PREMIUM</p>
+
+            <h2>
+                ¿Por qué elegirnos?
+            </h2>
+
+            <span>
+                Un servicio pensado para darte tranquilidad.
+            </span>
+
+        </div>
+
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+
+                <div class="icono">
+                    ✓
+                </div>
+
+                <h3>
+                    Vehículos de calidad
+                </h3>
+
+                <p>
+                    Contamos con vehículos seleccionados para ofrecer
+                    comodidad, seguridad y una excelente experiencia.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="icono">
+                    ★
+                </div>
+
+                <h3>
+                    Atención personalizada
+                </h3>
+
+                <p>
+                    Te ayudamos a encontrar el vehículo que mejor se
+                    adapte a lo que necesitas.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="icono">
+                    $
+                </div>
+
+                <h3>
+                    Precios claros
+                </h3>
+
+                <p>
+                    Consulta nuestras tarifas y recibe información
+                    clara antes de realizar tu reserva.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VEHÍCULOS
+========================= -->
+
+<section class="seccion vehiculos" id="vehiculos">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>NUESTROS VEHÍCULOS</p>
+
+            <h2>
+                Elige tu vehículo
+            </h2>
+
+            <span>
+                Encuentra la opción ideal para tus necesidades.
+            </span>
+
+        </div>
+
+
+        <div class="vehiculos-grid">
+
+
+            <!-- 1 SUZUKI SWIFT -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="SWIFT.jpeg"
+                        alt="Suzuki Swift"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        COMPACTO
+                    </span>
+
+                    <h3>
+                        Suzuki Swift
+                    </h3>
+
+                    <p>
+                        Compacto, práctico y cómodo para el uso diario.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 45/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 2 TOYOTA 4RUNNER -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen carrusel">
+
+                    <img
+                        src="Runner.jpeg"
+                        alt="Toyota 4Runner negra"
+                        class="imagen-carrusel"
+                        loading="lazy">
+
+                    <img
+                        src="Runner blanca .jpeg"
+                        alt="Toyota 4Runner blanca"
+                        class="imagen-carrusel oculta"
+                        loading="lazy">
+
+                    <button
+                        class="flecha izquierda"
+                        onclick="cambiarImagen(this, -1)"
+                        aria-label="Imagen anterior">
+                        ‹
+                    </button>
+
+                    <button
+                        class="flecha derecha"
+                        onclick="cambiarImagen(this, 1)"
+                        aria-label="Imagen siguiente">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Toyota 4Runner
+                    </h3>
+
+                    <p>
+                        Potencia, espacio y presencia para cualquier ocasión.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 91/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3 EMZOOM NEGRA -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="emzoom.jpeg"
+                        alt="GAC Emzoom negra"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        GAC Emzoom
+                    </h3>
+
+                    <p>
+                        Diseño moderno, tecnología y comodidad.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 4 POLARIS -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Polaris .jpeg"
+                        alt="Polaris RZR XP4"
+                        loading="lazy"
+                        onerror="this.style.display='none';">
+
+                    <div class="sin-imagen">
+                        Imagen no disponible
+                    </div>
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        OFF ROAD
+                    </span>
+
+                    <h3>
+                        Polaris RZR XP4
+                    </h3>
+
+                    <p>
+                        Una opción deportiva para experiencias diferentes.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            Bs 4.000 / 6 horas
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 5 MONTERO -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Montero.jpeg"
+                        alt="Mitsubishi Montero Sport"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Mitsubishi Montero Sport
+                    </h3>
+
+                    <p>
+                        SUV amplio, robusto y cómodo.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 91/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 6 SUZUKI JIMNY -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen carrusel">
+
+                    <img
+                        src="jimny.jpeg"
+                        alt="Suzuki Jimny roja"
+                        class="imagen-carrusel"
+                        loading="lazy">
+
+                    <img
+                        src="Jimny verde.jpeg"
+                        alt="Suzuki Jimny verde"
+                        class="imagen-carrusel oculta"
+                        loading="lazy">
+
+                    <button
+                        class="flecha izquierda"
+                        onclick="cambiarImagen(this, -1)"
+                        aria-label="Imagen anterior">
+                        ‹
+                    </button>
+
+                    <button
+                        class="flecha derecha"
+                        onclick="cambiarImagen(this, 1)"
+                        aria-label="Imagen siguiente">
+                        ›
+                    </button>
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        4X4
+                    </span>
+
+                    <h3>
+                        Suzuki Jimny
+                    </h3>
+
+                    <p>
+                        Compacto, aventurero y preparado para cualquier terreno.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 7 BMW X6 -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="X6.jpeg"
+                        alt="BMW X6"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        PREMIUM
+                    </span>
+
+                    <h3>
+                        BMW X6
+                    </h3>
+
+                    <p>
+                        Elegancia, potencia y confort premium.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 135/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 8 EMZOOM BLANCA -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Emzoom blanca .jpeg"
+                        alt="GAC Emzoom blanca"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        GAC Emzoom Blanca
+                    </h3>
+
+                    <p>
+                        Estilo moderno y excelente comodidad.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 9 QASHQAI -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Qashqai.jpeg"
+                        alt="Nissan Qashqai"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Nissan Qashqai
+                    </h3>
+
+                    <p>
+                        Comodidad y diseño para el uso diario.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 10 ZNA -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Zna rich.jpeg"
+                        alt="ZNA Rich 6 Pro"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        PICK UP
+                    </span>
+
+                    <h3>
+                        ZNA Rich 6 Pro
+                    </h3>
+
+                    <p>
+                        Fuerza y capacidad para diferentes necesidades.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 91/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 11 SONET -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Kia sonet.jpeg"
+                        alt="Kia Sonet"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Kia Sonet
+                    </h3>
+
+                    <p>
+                        Compacto, moderno y eficiente.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 12 KIA RIO -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Kia rio.jpeg"
+                        alt="Kia Rio"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SEDÁN
+                    </span>
+
+                    <h3>
+                        Kia Rio
+                    </h3>
+
+                    <p>
+                        Cómodo y económico para el día a día.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 40/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 13 CHERY -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="tiggo.jpeg"
+                        alt="Chery Tiggo 2"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Chery Tiggo 2
+                    </h3>
+
+                    <p>
+                        Práctico, cómodo y versátil.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 14 HONDA -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Honda wr.jpeg"
+                        alt="Honda WR-V"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Honda WR-V
+                    </h3>
+
+                    <p>
+                        Comodidad y practicidad para todos los días.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 77/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 15 MAZDA -->
+
+            <article class="vehiculo">
+
+                <div class="vehiculo-imagen">
+
+                    <img
+                        src="Mazda cx5.jpeg"
+                        alt="Mazda CX-5"
+                        loading="lazy">
+
+                </div>
+
+                <div class="vehiculo-info">
+
+                    <span class="categoria">
+                        SUV
+                    </span>
+
+                    <h3>
+                        Mazda CX-5
+                    </h3>
+
+                    <p>
+                        Diseño, comodidad y una experiencia premium.
+                    </p>
+
+                    <div class="vehiculo-pie">
+
+                        <strong class="precio">
+                            USD 99/día
+                        </strong>
+
+                        <a href="#reserva">
+                            Reservar →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+
+<section class="seccion servicios" id="servicios">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>NUESTROS SERVICIOS</p>
+
+            <h2>
+                Más que un alquiler
+            </h2>
+
+            <span>
+                Te acompañamos durante todo el proceso.
+            </span>
+
+        </div>
+
+
+        <div class="servicios-grid">
+
+            <div class="servicio">
+
+                <h3>
+                    Alquiler de vehículos
+                </h3>
+
+                <p>
+                    Diferentes opciones para adaptarnos a tus necesidades.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <h3>
+                    Atención personalizada
+                </h3>
+
+                <p>
+                    Resolución de dudas y asesoramiento durante tu reserva.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <h3>
+                    Reserva sencilla
+                </h3>
+
+                <p>
+                    Solicita tu vehículo de manera rápida directamente
+                    por WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <h3>
+                    Soporte
+                </h3>
+
+                <p>
+                    Estamos disponibles para ayudarte con tu alquiler.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESO
+========================= -->
+
+<section class="seccion proceso">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>PROCESO</p>
+
+            <h2>
+                Alquilar es sencillo
+            </h2>
+
+        </div>
+
+
+        <div class="pasos">
+
+            <div class="paso">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Fotocopia de carnet de identidad 
+                </h3>
+
+                <p>
+                    Presenta una copia de tu carnet 
+                    de identidad vigente.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Licencia de conducir 
+                </h3>
+
+                <p>
+                    Tu licencia debe estar vigente y en buen estado.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Garantía
+                </h3>
+
+                <p>
+                    Vehiculo estandar: 3000 bs.<br>
+                    Vehiculo suv vagoneta: 5000 bs.
+                </p>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Contrato de alquiler
+                </h3>
+
+                <p>
+                   Firmamos un contrato simple y seguro.
+                </p>
+
+            </div>
+
+            <div class="paso">
+
+                <span>
+                    05
+                </span>
+
+                <h3>
+                    Ubicación de la empresa o casa
+                </h3>
+
+                <p>
+                   Debes indicar la dirección 
+                   de la empresa o tu domicilio.
+                </p>
+
+            </div>
+
+            <div class="paso">
+
+                <span>
+                    06
+                </span>
+
+                <h3>
+                     Reserva del vehículo
+                </h3>
+
+                <p>
+                   Confirma la fecha y hora de tu alquiler.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OPINIONES
+========================= -->
+
+<section class="seccion opiniones">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>CLIENTES</p>
+
+            <h2>
+                Lo que dicen nuestros clientes
+            </h2>
+
+        </div>
+
+
+        <div class="opiniones-grid">
+
+            <div class="opinion">
+
+                <div class="estrellas">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Excelente atención y el vehículo estaba en muy
+                    buenas condiciones."
+                </p>
+
+                <strong>
+                    Cliente RENTAL PREMIUM
+                </strong>
+
+            </div>
+
+
+            <div class="opinion">
+
+                <div class="estrellas">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "El proceso fue rápido y sencillo. Muy buena experiencia."
+                </p>
+
+                <strong>
+                    Cliente RENTAL PREMIUM
+                </strong>
+
+            </div>
+
+
+            <div class="opinion">
+
+                <div class="estrellas">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Muy buena variedad de vehículos y excelente servicio."
+                </p>
+
+                <strong>
+                    Cliente RENTAL PREMIUM
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="seccion preguntas" id="preguntas">
+
+    <div class="contenedor">
+
+        <div class="titulo-seccion">
+
+            <p>PREGUNTAS FRECUENTES</p>
+
+            <h2>
+                Preguntas frecuentes
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+            <details>
+
+                <summary>
+                    ¿Cómo puedo reservar un vehículo?
+                </summary>
+
+                <p>
+                    Selecciona el vehículo que deseas, completa el
+                    formulario y envíanos tu solicitud por WhatsApp.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Los precios son por día?
+                </summary>
+
+                <p>
+                    La mayoría de nuestros vehículos tienen tarifa
+                    diaria. El Polaris RZR XP4 cuenta con una tarifa
+                    especial de 6 horas.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Puedo consultar disponibilidad?
+                </summary>
+
+                <p>
+                    Sí. Una vez enviada tu solicitud nos pondremos
+                    en contacto contigo para confirmar disponibilidad.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Cómo recibo confirmación?
+                </summary>
+
+                <p>
+                    Nuestro equipo se comunicará contigo directamente
+                    por WhatsApp.
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section class="contacto" id="contacto">
+
+    <div class="contenedor contacto-contenido">
+
+        <div>
+
+            <div class="etiqueta">
+                ¿TIENES ALGUNA DUDA?
+            </div>
+
+            <h2>
+                Hablemos.
+            </h2>
+
+            <p>
+                Estamos disponibles para ayudarte a elegir
+                el vehículo adecuado.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/59172677730"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="boton">
+
+            Contactar por WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="contenedor footer-contenido">
+
+        <div class="footer-logo">
+
+            <img
+                src="Rental.png"
+                alt="RENTAL PREMIUM"
+                class="logo-footer">
+
+            <p>
+                Alquiler de vehículos con atención personalizada
+                y servicio de calidad.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Navegación
+            </h3>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#vehiculos">
+                Vehículos
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#preguntas">
+                Preguntas frecuentes
+            </a>
+
+        </div>
+
+
+        <div class="footer-contacto">
+
+            <h3>
+                Contacto
+            </h3>
+
+            <p>
+                WhatsApp
+            </p>
+
+            <p>
+                +591 72677730
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 RENTAL PREMIUM. Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP FLOTANTE
+========================= -->
+
+<a
+    href="https://wa.me/59172677730"
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+    <span>☎</span>
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
